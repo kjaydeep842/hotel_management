@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { hotels } from '../data/hotels';
 import Navbar from '../components/Navbar';
@@ -25,9 +25,13 @@ const HotelDetails = () => {
         children: 0
     });
 
-    const handleUpdateSearch = (params) => {
+    const handleUpdateSearch = useCallback((params) => {
         setSearchParams(params);
-    };
+    }, []);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     if (!hotel) {
         return <div className="min-h-screen flex items-center justify-center text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-900">Hotel not found</div>;

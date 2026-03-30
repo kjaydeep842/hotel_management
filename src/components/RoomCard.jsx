@@ -49,7 +49,7 @@ const RoomCard = ({ room, onSelect }) => {
                     </div>
                 </div>
 
-                <div className="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-6 mt-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-gray-100 dark:border-gray-700 pt-6 mt-4">
                     <div>
                         <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1">Price per night</p>
                         <div className="flex items-baseline gap-1">
@@ -62,7 +62,7 @@ const RoomCard = ({ room, onSelect }) => {
 
                     <button
                         onClick={() => onSelect(room)}
-                        className="px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold rounded-xl hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white transition-all transform hover:scale-105 shadow-xl shadow-gray-200 dark:shadow-none"
+                        className="w-full sm:w-auto px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold rounded-xl hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white transition-all transform hover:scale-105 shadow-xl shadow-gray-200 dark:shadow-none"
                     >
                         Select Room
                     </button>

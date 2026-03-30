@@ -78,23 +78,23 @@ const Hero = () => {
                 <div className="rounded-[2.5rem] bg-white/20 dark:bg-black/30 backdrop-blur-xl border border-white/30 dark:border-white/10 p-3 mx-auto shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] flex flex-col md:flex-row gap-2">
 
                     {/* Location Input */}
-                    <div className="flex-1 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md rounded-3xl px-6 py-4 flex flex-col justify-center transition-colors group hover:bg-white/90 dark:hover:bg-gray-800/80 border border-white/40 dark:border-gray-700/50">
-                        <label className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-1">Destination</label>
+                    <div className="flex-1 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md rounded-3xl px-4 md:px-6 py-2 md:py-4 flex flex-col justify-center transition-colors group hover:bg-white/90 dark:hover:bg-gray-800/80 border border-white/40 dark:border-gray-700/50">
+                        <label className="text-[10px] md:text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-1">Destination</label>
                         <div className="flex items-center">
-                            <MapPin className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-3 group-hover:animate-bounce" />
+                            <MapPin className="h-4 w-4 md:h-5 md:w-5 text-blue-600 dark:text-blue-400 mr-2 md:mr-3 group-hover:animate-bounce" />
                             <input
                                 type="text"
                                 placeholder="Where to?"
-                                className="w-full bg-transparent border-none focus:ring-0 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 font-bold text-lg outline-none"
+                                className="w-full bg-transparent border-none focus:ring-0 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 font-bold text-base md:text-lg outline-none"
                             />
                         </div>
                     </div>
 
                     {/* Date Range Picker */}
-                    <div className="flex-1 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md rounded-3xl px-6 py-4 flex flex-col justify-center transition-colors group hover:bg-white/90 dark:hover:bg-gray-800/80 border border-white/40 dark:border-gray-700/50 relative z-50">
-                        <label className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-1">Dates</label>
+                    <div className="flex-1 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md rounded-3xl px-4 md:px-6 py-2 md:py-4 flex flex-col justify-center transition-colors group hover:bg-white/90 dark:hover:bg-gray-800/80 border border-white/40 dark:border-gray-700/50 relative z-50">
+                        <label className="text-[10px] md:text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-1">Dates</label>
                         <div className="flex items-center">
-                            <Calendar className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-3 flex-shrink-0" />
+                            <Calendar className="h-4 w-4 md:h-5 md:w-5 text-blue-600 dark:text-blue-400 mr-2 md:mr-3 flex-shrink-0" />
                             <DatePicker
                                 selectsRange
                                 startDate={startDate}
@@ -105,7 +105,7 @@ const Hero = () => {
                                 placeholderText="Add dates"
                                 dateFormat="MMM d, yyyy"
                                 value={getDateDisplay()}
-                                className="w-full bg-transparent border-none focus:ring-0 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 font-bold text-lg cursor-pointer caret-transparent outline-none"
+                                className="w-full bg-transparent border-none focus:ring-0 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 font-bold text-base md:text-lg cursor-pointer caret-transparent outline-none"
                                 popperPlacement="top-start"
                                 popperModifiers={[
                                     { name: 'offset', options: { offset: [0, 8] } },
@@ -117,11 +117,11 @@ const Hero = () => {
                     </div>
 
                     {/* Guests Input */}
-                    <div className="flex-1 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md rounded-3xl px-6 py-4 flex flex-col justify-center transition-colors group hover:bg-white/90 dark:hover:bg-gray-800/80 border border-white/40 dark:border-gray-700/50">
-                        <label className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-1">Guests</label>
+                    <div className="flex-1 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md rounded-3xl px-4 md:px-6 py-2 md:py-4 flex flex-col justify-center transition-colors group hover:bg-white/90 dark:hover:bg-gray-800/80 border border-white/40 dark:border-gray-700/50">
+                        <label className="text-[10px] md:text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-1">Guests</label>
                         <div className="flex items-center">
-                            <Users className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-3" />
-                            <select className="w-full bg-transparent border-none focus:ring-0 text-gray-900 dark:text-gray-100 font-bold text-lg cursor-pointer appearance-none outline-none">
+                            <Users className="h-4 w-4 md:h-5 md:w-5 text-blue-600 dark:text-blue-400 mr-2 md:mr-3" />
+                            <select className="w-full bg-transparent border-none focus:ring-0 text-gray-900 dark:text-gray-100 font-bold text-base md:text-lg cursor-pointer appearance-none outline-none">
                                 <option className="dark:bg-gray-800">2 Adults</option>
                                 <option className="dark:bg-gray-800">1 Adult</option>
                                 <option className="dark:bg-gray-800">Family</option>
@@ -131,8 +131,9 @@ const Hero = () => {
 
                     {/* Search Button */}
                     <div className="w-full md:w-auto p-1">
-                        <button className="w-full md:w-24 h-full min-h-[80px] bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-3xl font-bold shadow-lg shadow-blue-500/30 transition-all flex items-center justify-center active:scale-95 group border border-white/20">
-                            <Search className="h-7 w-7 group-hover:scale-110 transition-transform" />
+                        <button className="w-full md:w-24 h-full min-h-[50px] md:min-h-[80px] bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white rounded-3xl font-bold shadow-lg shadow-blue-500/30 transition-all flex items-center justify-center active:scale-95 group border border-white/20">
+                            <span className="md:hidden mr-2">Search</span>
+                            <Search className="h-5 w-5 md:h-7 md:w-7 group-hover:scale-110 transition-transform" />
                         </button>
                     </div>
 

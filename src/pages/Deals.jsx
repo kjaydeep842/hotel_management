@@ -256,7 +256,7 @@ const Deals = () => {
 
                                 <CountdownTimer expiresDate={deal.expires} />
 
-                                <div className="flex items-center justify-between">
+                                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                                     <div>
                                         <div className="flex items-baseline gap-2">
                                             <span className="text-2xl font-extrabold text-blue-600 dark:text-blue-400">${deal.salePrice}</span>
@@ -266,7 +266,7 @@ const Deals = () => {
                                     </div>
                                     <Link
                                         to={`/hotel/${deal.hotelId}`}
-                                        className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 group"
+                                        className="w-full sm:w-auto flex justify-center items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 group"
                                     >
                                         Book Now
                                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
